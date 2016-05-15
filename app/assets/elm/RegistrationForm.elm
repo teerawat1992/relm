@@ -169,20 +169,31 @@ viewValidation model =
 
       , div [ class "panel-body" ]
         [ ul []
-          [ li [ style [("color", namePresenceColor)] ]
-              [ text "Name must be present" ]
+          [ validationList
+              namePresenceColor
+              "Name must be present"
 
-          , li [ style [("color", passwordContainsNumberColor)] ]
-              [ text "Password must contain at least one number (0-9)" ]
+          , validationList
+              passwordContainsNumberColor
+              "Password must contain at least one number (0-9)"
 
-          , li [ style [("color", passwordWithNonWordCharacterColor)] ]
-              [ text "Password must contain at least one non-word character" ]
+          , validationList
+              passwordWithNonWordCharacterColor
+              "Password must contain at least one non-word character"
 
-          , li [ style [("color", passwordLengthColor)] ]
-              [ text "Password must be at least 8 characters" ]
+          , validationList
+              passwordLengthColor
+              "Password must be at least 8 characters"
 
-          , li [ style [("color", passwordsMatchColor)]]
-              [ text "Passwords match!" ]
+          , validationList
+              passwordsMatchColor
+              "Passwords match!"
           ]
         ]
       ]
+
+
+validationList : String -> String -> Html Msg
+validationList textColor textDescription =
+  li [ style [("color", textColor)]]
+    [ text textDescription ]

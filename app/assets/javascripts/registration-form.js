@@ -7327,6 +7327,23 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
+var _user$project$RegistraionForm$validationList = F2(
+	function (textColor, textDescription) {
+		return A2(
+			_elm_lang$html$Html$li,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$style(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							{ctor: '_Tuple2', _0: 'color', _1: textColor}
+						]))
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html$text(textDescription)
+				]));
+	});
 var _user$project$RegistraionForm$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
@@ -7429,76 +7446,11 @@ var _user$project$RegistraionForm$viewValidation = function (model) {
 							[]),
 						_elm_lang$core$Native_List.fromArray(
 							[
-								A2(
-								_elm_lang$html$Html$li,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Attributes$style(
-										_elm_lang$core$Native_List.fromArray(
-											[
-												{ctor: '_Tuple2', _0: 'color', _1: namePresenceColor}
-											]))
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Name must be present')
-									])),
-								A2(
-								_elm_lang$html$Html$li,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Attributes$style(
-										_elm_lang$core$Native_List.fromArray(
-											[
-												{ctor: '_Tuple2', _0: 'color', _1: passwordContainsNumberColor}
-											]))
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Password must contain at least one number (0-9)')
-									])),
-								A2(
-								_elm_lang$html$Html$li,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Attributes$style(
-										_elm_lang$core$Native_List.fromArray(
-											[
-												{ctor: '_Tuple2', _0: 'color', _1: passwordWithNonWordCharacterColor}
-											]))
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Password must contain at least one non-word character')
-									])),
-								A2(
-								_elm_lang$html$Html$li,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Attributes$style(
-										_elm_lang$core$Native_List.fromArray(
-											[
-												{ctor: '_Tuple2', _0: 'color', _1: passwordLengthColor}
-											]))
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Password must be at least 8 characters')
-									])),
-								A2(
-								_elm_lang$html$Html$li,
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html_Attributes$style(
-										_elm_lang$core$Native_List.fromArray(
-											[
-												{ctor: '_Tuple2', _0: 'color', _1: passwordsMatchColor}
-											]))
-									]),
-								_elm_lang$core$Native_List.fromArray(
-									[
-										_elm_lang$html$Html$text('Passwords match!')
-									]))
+								A2(_user$project$RegistraionForm$validationList, namePresenceColor, 'Name must be present'),
+								A2(_user$project$RegistraionForm$validationList, passwordContainsNumberColor, 'Password must contain at least one number (0-9)'),
+								A2(_user$project$RegistraionForm$validationList, passwordWithNonWordCharacterColor, 'Password must contain at least one non-word character'),
+								A2(_user$project$RegistraionForm$validationList, passwordLengthColor, 'Password must be at least 8 characters'),
+								A2(_user$project$RegistraionForm$validationList, passwordsMatchColor, 'Passwords match!')
 							]))
 					]))
 			]));
