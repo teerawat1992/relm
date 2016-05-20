@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Rails and Elm",
-    "repository": "https://github.com/teerawat1992/reml.git",
+    "repository": "https://github.com/teerawat1992/relm.git",
     "license": "BSD3",
     "source-directories": [
         "app/assets/elm"
