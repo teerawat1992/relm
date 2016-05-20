@@ -7327,7 +7327,7 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$RegistraionForm$validationList = F2(
+var _teerawat1992$relm$RegistrationForm$validationList = F2(
 	function (textColor, textDescription) {
 		return A2(
 			_elm_lang$html$Html$li,
@@ -7344,7 +7344,7 @@ var _user$project$RegistraionForm$validationList = F2(
 					_elm_lang$html$Html$text(textDescription)
 				]));
 	});
-var _user$project$RegistraionForm$update = F2(
+var _teerawat1992$relm$RegistrationForm$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
@@ -7362,49 +7362,49 @@ var _user$project$RegistraionForm$update = F2(
 					{passwordConfirmation: _p0._0});
 		}
 	});
-var _user$project$RegistraionForm$validateNonWordCharacterOfPassword = function (model) {
+var _teerawat1992$relm$RegistrationForm$validateNonWordCharacterOfPassword = function (model) {
 	return A2(
 		_elm_lang$core$Regex$contains,
 		_elm_lang$core$Regex$regex('\\W'),
 		model.password);
 };
-var _user$project$RegistraionForm$validateNumberOfPassword = function (model) {
+var _teerawat1992$relm$RegistrationForm$validateNumberOfPassword = function (model) {
 	return A2(
 		_elm_lang$core$Regex$contains,
 		_elm_lang$core$Regex$regex('\\d'),
 		model.password);
 };
-var _user$project$RegistraionForm$validateMatchOfPasswords = function (model) {
+var _teerawat1992$relm$RegistrationForm$validateMatchOfPasswords = function (model) {
 	return _elm_lang$core$Native_Utils.eq(model.password, model.passwordConfirmation);
 };
-var _user$project$RegistraionForm$validateLengthOfPassword = function (model) {
+var _teerawat1992$relm$RegistrationForm$validateLengthOfPassword = function (model) {
 	return _elm_lang$core$Native_Utils.cmp(
 		_elm_lang$core$String$length(model.password),
 		8) > -1;
 };
-var _user$project$RegistraionForm$validatePresenceOfPassword = function (model) {
+var _teerawat1992$relm$RegistrationForm$validatePresenceOfPassword = function (model) {
 	return _elm_lang$core$Basics$not(
 		_elm_lang$core$String$isEmpty(model.password));
 };
-var _user$project$RegistraionForm$validatePresenceOfName = function (model) {
+var _teerawat1992$relm$RegistrationForm$validatePresenceOfName = function (model) {
 	return _elm_lang$core$Basics$not(
 		_elm_lang$core$String$isEmpty(model.name));
 };
-var _user$project$RegistraionForm$isValid = function (model) {
+var _teerawat1992$relm$RegistrationForm$isValid = function (model) {
 	return A2(
 		_elm_lang$core$List$all,
 		function (validate) {
 			return validate(model);
 		},
 		_elm_lang$core$Native_List.fromArray(
-			[_user$project$RegistraionForm$validatePresenceOfName, _user$project$RegistraionForm$validatePresenceOfPassword, _user$project$RegistraionForm$validateLengthOfPassword, _user$project$RegistraionForm$validateMatchOfPasswords, _user$project$RegistraionForm$validateNumberOfPassword, _user$project$RegistraionForm$validateNonWordCharacterOfPassword]));
+			[_teerawat1992$relm$RegistrationForm$validatePresenceOfName, _teerawat1992$relm$RegistrationForm$validatePresenceOfPassword, _teerawat1992$relm$RegistrationForm$validateLengthOfPassword, _teerawat1992$relm$RegistrationForm$validateMatchOfPasswords, _teerawat1992$relm$RegistrationForm$validateNumberOfPassword, _teerawat1992$relm$RegistrationForm$validateNonWordCharacterOfPassword]));
 };
-var _user$project$RegistraionForm$viewValidation = function (model) {
-	var passwordsMatchColor = (_user$project$RegistraionForm$validateMatchOfPasswords(model) && _user$project$RegistraionForm$validatePresenceOfPassword(model)) ? 'green' : 'red';
-	var passwordWithNonWordCharacterColor = _user$project$RegistraionForm$validateNonWordCharacterOfPassword(model) ? 'green' : 'red';
-	var passwordContainsNumberColor = _user$project$RegistraionForm$validateNumberOfPassword(model) ? 'green' : 'red';
-	var passwordLengthColor = _user$project$RegistraionForm$validateLengthOfPassword(model) ? 'green' : 'red';
-	var namePresenceColor = _user$project$RegistraionForm$validatePresenceOfName(model) ? 'green' : 'red';
+var _teerawat1992$relm$RegistrationForm$viewValidation = function (model) {
+	var passwordsMatchColor = (_teerawat1992$relm$RegistrationForm$validateMatchOfPasswords(model) && _teerawat1992$relm$RegistrationForm$validatePresenceOfPassword(model)) ? 'green' : 'red';
+	var passwordWithNonWordCharacterColor = _teerawat1992$relm$RegistrationForm$validateNonWordCharacterOfPassword(model) ? 'green' : 'red';
+	var passwordContainsNumberColor = _teerawat1992$relm$RegistrationForm$validateNumberOfPassword(model) ? 'green' : 'red';
+	var passwordLengthColor = _teerawat1992$relm$RegistrationForm$validateLengthOfPassword(model) ? 'green' : 'red';
+	var namePresenceColor = _teerawat1992$relm$RegistrationForm$validatePresenceOfName(model) ? 'green' : 'red';
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -7446,30 +7446,30 @@ var _user$project$RegistraionForm$viewValidation = function (model) {
 							[]),
 						_elm_lang$core$Native_List.fromArray(
 							[
-								A2(_user$project$RegistraionForm$validationList, namePresenceColor, 'Name must be present'),
-								A2(_user$project$RegistraionForm$validationList, passwordContainsNumberColor, 'Password must contain at least one number (0-9)'),
-								A2(_user$project$RegistraionForm$validationList, passwordWithNonWordCharacterColor, 'Password must contain at least one non-word character'),
-								A2(_user$project$RegistraionForm$validationList, passwordLengthColor, 'Password must be at least 8 characters'),
-								A2(_user$project$RegistraionForm$validationList, passwordsMatchColor, 'Passwords match!')
+								A2(_teerawat1992$relm$RegistrationForm$validationList, namePresenceColor, 'Name must be present'),
+								A2(_teerawat1992$relm$RegistrationForm$validationList, passwordContainsNumberColor, 'Password must contain at least one number (0-9)'),
+								A2(_teerawat1992$relm$RegistrationForm$validationList, passwordWithNonWordCharacterColor, 'Password must contain at least one non-word character'),
+								A2(_teerawat1992$relm$RegistrationForm$validationList, passwordLengthColor, 'Password must be at least 8 characters'),
+								A2(_teerawat1992$relm$RegistrationForm$validationList, passwordsMatchColor, 'Passwords match!')
 							]))
 					]))
 			]));
 };
-var _user$project$RegistraionForm$Model = F3(
+var _teerawat1992$relm$RegistrationForm$Model = F3(
 	function (a, b, c) {
 		return {name: a, password: b, passwordConfirmation: c};
 	});
-var _user$project$RegistraionForm$model = A3(_user$project$RegistraionForm$Model, '', '', '');
-var _user$project$RegistraionForm$PasswordConfirmation = function (a) {
+var _teerawat1992$relm$RegistrationForm$model = A3(_teerawat1992$relm$RegistrationForm$Model, '', '', '');
+var _teerawat1992$relm$RegistrationForm$PasswordConfirmation = function (a) {
 	return {ctor: 'PasswordConfirmation', _0: a};
 };
-var _user$project$RegistraionForm$Password = function (a) {
+var _teerawat1992$relm$RegistrationForm$Password = function (a) {
 	return {ctor: 'Password', _0: a};
 };
-var _user$project$RegistraionForm$Name = function (a) {
+var _teerawat1992$relm$RegistrationForm$Name = function (a) {
 	return {ctor: 'Name', _0: a};
 };
-var _user$project$RegistraionForm$view = function (model) {
+var _teerawat1992$relm$RegistrationForm$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -7492,7 +7492,7 @@ var _user$project$RegistraionForm$view = function (model) {
 								_elm_lang$html$Html_Attributes$name('user[name]'),
 								_elm_lang$html$Html_Attributes$placeholder('Name'),
 								_elm_lang$html$Html_Attributes$class('form-control'),
-								_elm_lang$html$Html_Events$onInput(_user$project$RegistraionForm$Name)
+								_elm_lang$html$Html_Events$onInput(_teerawat1992$relm$RegistrationForm$Name)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[]))
@@ -7513,7 +7513,7 @@ var _user$project$RegistraionForm$view = function (model) {
 								_elm_lang$html$Html_Attributes$name('user[password]'),
 								_elm_lang$html$Html_Attributes$placeholder('Password'),
 								_elm_lang$html$Html_Attributes$class('form-control'),
-								_elm_lang$html$Html_Events$onInput(_user$project$RegistraionForm$Password)
+								_elm_lang$html$Html_Events$onInput(_teerawat1992$relm$RegistrationForm$Password)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[]))
@@ -7534,12 +7534,12 @@ var _user$project$RegistraionForm$view = function (model) {
 								_elm_lang$html$Html_Attributes$name('user[password_confirmation]'),
 								_elm_lang$html$Html_Attributes$placeholder('Re-enter password'),
 								_elm_lang$html$Html_Attributes$class('form-control'),
-								_elm_lang$html$Html_Events$onInput(_user$project$RegistraionForm$PasswordConfirmation)
+								_elm_lang$html$Html_Events$onInput(_teerawat1992$relm$RegistrationForm$PasswordConfirmation)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[]))
 					])),
-				_user$project$RegistraionForm$viewValidation(model),
+				_teerawat1992$relm$RegistrationForm$viewValidation(model),
 				A2(
 				_elm_lang$html$Html$input,
 				_elm_lang$core$Native_List.fromArray(
@@ -7549,20 +7549,20 @@ var _user$project$RegistraionForm$view = function (model) {
 						_elm_lang$html$Html_Attributes$class('btn btn-primary btn-block btn-lg'),
 						_elm_lang$html$Html_Attributes$disabled(
 						_elm_lang$core$Basics$not(
-							_user$project$RegistraionForm$isValid(model)))
+							_teerawat1992$relm$RegistrationForm$isValid(model)))
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[]))
 			]));
 };
-var _user$project$RegistraionForm$main = {
+var _teerawat1992$relm$RegistrationForm$main = {
 	main: _elm_lang$html$Html_App$beginnerProgram(
-		{model: _user$project$RegistraionForm$model, view: _user$project$RegistraionForm$view, update: _user$project$RegistraionForm$update})
+		{model: _teerawat1992$relm$RegistrationForm$model, view: _teerawat1992$relm$RegistrationForm$view, update: _teerawat1992$relm$RegistrationForm$update})
 };
 
 var Elm = {};
-Elm['RegistraionForm'] = Elm['RegistraionForm'] || {};
-_elm_lang$core$Native_Platform.addPublicModule(Elm['RegistraionForm'], 'RegistraionForm', typeof _user$project$RegistraionForm$main === 'undefined' ? null : _user$project$RegistraionForm$main);
+Elm['RegistrationForm'] = Elm['RegistrationForm'] || {};
+_elm_lang$core$Native_Platform.addPublicModule(Elm['RegistrationForm'], 'RegistrationForm', typeof _teerawat1992$relm$RegistrationForm$main === 'undefined' ? null : _teerawat1992$relm$RegistrationForm$main);
 
 if (typeof define === "function" && define['amd'])
 {

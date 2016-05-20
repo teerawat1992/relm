@@ -1,4 +1,4 @@
-module RegistraionForm exposing (..)
+module RegistrationForm exposing (..)
 
 
 import Html exposing (..)

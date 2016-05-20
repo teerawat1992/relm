@@ -10,8 +10,8 @@ Product.delete_all
 
 Product.create!(
   title: "Elm",
-  description: "The best of functional programming in your browser",
-  image_url: "elm.jpg",
+  description: "A functional programming language for declaratively creating web browser-based graphical user interfaces.",
+  image_url: "elm.png",
   price: 69.99
 )
 
@@ -24,8 +24,8 @@ Product.create!(
 
 Product.create!(
   title: "Ruby",
-  description: "A dynamic, open source programming language with a focus on simplicity and productivity",
-  image_url: "ruby.jpg",
+  description: "A dynamic, open source programming language with a focus on simplicity and productivity.",
+  image_url: "ruby.png",
   price: 69.99
 )
 
