@@ -5,3 +5,28 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.delete_all
+
+Product.create!(
+  title: "Elm",
+  description: "The best of functional programming in your browser",
+  image_url: "elm.jpg",
+  price: 69.99
+)
+
+Product.create!(
+  title: "Elixir",
+  description: "A dynamic, functional language designed for building scalable and maintainable applications.",
+  image_url: "elixir.jpg",
+  price: 69.99
+)
+
+Product.create!(
+  title: "Ruby",
+  description: "A dynamic, open source programming language with a focus on simplicity and productivity",
+  image_url: "ruby.jpg",
+  price: 69.99
+)
+
+puts "Created #{Product.count} product(s)."

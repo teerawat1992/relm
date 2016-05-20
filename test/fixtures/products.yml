@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ruby:
+  title: "Ruby"
+  description: "Ruby is greate."
+  image_url: "ruby.jpg"
+  price: 99.99
+
+elixir:
+  title: "Elixir"
+  description: "Elixir is awesome."
+  image_url: "elixir.jpg"
+  price: 99.99
+
+elm:
+  title: "Elm"
+  description: "Elm is cool."
+  image_url: "elm.png"
+  price: 99.99
