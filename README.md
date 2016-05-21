@@ -5,6 +5,6 @@ Rails :heart: Elm
 ### Development
 
 ```shell
-rake db:setup
-elm-package install
+$ elm package install
+$ rake db:setup
 ```

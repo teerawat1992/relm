@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'rack-cors', require: "rack/cors"
 
 group :development, :test do
   gem 'byebug'
