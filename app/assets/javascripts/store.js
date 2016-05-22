@@ -8077,22 +8077,6 @@ var _teerawat1992$relm$Store$Product = F6(
 	function (a, b, c, d, e, f) {
 		return {title: a, description: b, image_url: c, price: d, created_at: e, updated_at: f};
 	});
-var _teerawat1992$relm$Store$update = F2(
-	function (msg, model) {
-		var _p0 = msg;
-		if (_p0.ctor === 'FetchSucceed') {
-			return {ctor: '_Tuple2', _0: _p0._0, _1: _elm_lang$core$Platform_Cmd$none};
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_List.fromArray(
-					[
-						A6(_teerawat1992$relm$Store$Product, '', '', '', '', '', '')
-					]),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		}
-	});
 var _teerawat1992$relm$Store$decodeProduct = A7(
 	_elm_lang$core$Json_Decode$object6,
 	_teerawat1992$relm$Store$Product,
@@ -8125,6 +8109,22 @@ var _teerawat1992$relm$Store$init = {
 		]),
 	_1: _teerawat1992$relm$Store$getProducts
 };
+var _teerawat1992$relm$Store$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		if (_p0.ctor === 'FetchSucceed') {
+			return {ctor: '_Tuple2', _0: _p0._0, _1: _elm_lang$core$Platform_Cmd$none};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_List.fromArray(
+					[
+						A6(_teerawat1992$relm$Store$Product, '', '', '', '', '', '')
+					]),
+				_1: _teerawat1992$relm$Store$getProducts
+			};
+		}
+	});
 var _teerawat1992$relm$Store$main = {
 	main: _elm_lang$html$Html_App$program(
 		{init: _teerawat1992$relm$Store$init, view: _teerawat1992$relm$Store$view, update: _teerawat1992$relm$Store$update, subscriptions: _teerawat1992$relm$Store$subscriptions})

@@ -58,7 +58,7 @@ update msg model =
       (products , Cmd.none)
 
     FetchFail _ ->
-      ([ Product "" "" "" "" "" "" ], Cmd.none)
+      ([ Product "" "" "" "" "" "" ], getProducts)
 
 
 
