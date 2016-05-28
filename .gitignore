@@ -12,3 +12,4 @@
 !/log/.keep
 /tmp
 elm-stuff
+app/assets/javascripts/elm-js
